@@ -1,0 +1,52 @@
+~ start
+Heihei: [[buh.|bluh.|bguh.]]. b...bcaw.
+Heihei: hi...hello. you...how are you?
+do get_node("/root/main.tscn/Node2D/ParallaxBackground/ParallaxLayer/Background").texture = load("res://backgrounds/IMG_5053.png")
+
+- okay. you?
+Heihei: ...
+Heihei: hmm...
+- great!
+Heihei: ...good.
+Heihei: good to hear.
+
+Heihei: umm...
+Heihei: why are you here...?
+
+- i just wanted to check in on you.
+Heihei: really?
+- ...something. feels off.
+Heihei: i see.
+
+You: i wanted to talk to you about it.
+Heihei: ...about what?
+You: something's wrong with the Overglade...
+Heihei: i know.
+You: so, why...?
+Heihei: i can't talk about it.
+
+- why?
+Heihei: ...
+- okay.
+Heihei: well...
+
+Heihei: it's that...that...
+You: ...
+Heihei: that otter. that. i can't-
+Heihei: they took him, you know.
+
+- who?
+Heihei: haj. blahaj.
+Heihei: the shark. they took him.
+- i heard about...
+Heihei: what?
+You: a shark.
+
+- it'll be okay.
+Heihei: i hope so...
+
+#- Start again => start
+#- End the conversation => END
+Heihei: i wonder what comes next?
+=> END
+

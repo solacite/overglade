@@ -1,6 +1,10 @@
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
+var bg = {
+	"sad": preload("res://backgrounds/IMG_5049.png"),
+	"happy": preload("res://backgrounds/IMG_5053.png")
+}
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
@@ -161,6 +165,9 @@ func apply_dialogue_line() -> void:
 		is_waiting_for_input = true
 		balloon.focus_mode = Control.FOCUS_ALL
 		balloon.grab_focus()
+
+#func _on_dialogue_line():
+	
 
 
 ## Go to the next line

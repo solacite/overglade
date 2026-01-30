@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://xb0loc064hhe"]
+
+[ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cgsbbj7i14tis" path="res://scenes/balloon.tscn" id="2_0xm2m"]
+[ext_resource type="Resource" uid="uid://bpwwtpo6dbdnm" path="res://dialogue/intro.dialogue" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://dt6pbb5j6yudu" path="res://backgrounds/IMG_5049.png" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://cketmfnx5sjwp" path="res://backgrounds/IMG_5050.png" id="5_272bh"]
+[ext_resource type="Texture2D" uid="uid://cp5va4p6c080u" path="res://backgrounds/IMG_5051.png" id="6_5vw27"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_7mycd")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("4_7mycd")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.75, 0.75)
+
+[node name="Grass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(1.055, 1.055)
+texture = ExtResource("5_272bh")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Sparkles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("6_5vw27")
+
+[node name="ExampleBalloon" parent="." instance=ExtResource("2_0xm2m")]
+dialogue_resource = ExtResource("3_1bvp3")
+auto_start = true

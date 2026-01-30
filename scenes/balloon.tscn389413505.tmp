@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cgsbbj7i14tis"]
+[gd_scene load_steps=21 format=3 uid="uid://cgsbbj7i14tis"]
 
-[ext_resource type="Script" uid="uid://cu0s8k0ewstql" path="res:///balloon.gd" id="1_36de5"]
+[ext_resource type="Script" uid="uid://d035qs21hjepn" path="res://scripts/balloon.gd" id="1_jj3vs"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Resource" uid="uid://beiwrulb60trr" path="res://dialogue/intro.dialogue" id="2_m0o5a"]
+[ext_resource type="FontFile" uid="uid://vv7b57874v55" path="res://fonts/Merriweather_120pt_SemiCondensed-MediumItalic.ttf" id="2_wxbh2"]
+[ext_resource type="FontFile" uid="uid://b638xxpw3kc0l" path="res://fonts/Merriweather_120pt_SemiCondensed-Regular.ttf" id="4_4nd2f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -63,6 +65,14 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jj3vs"]
+bg_color = Color(0.25882354, 0.3529412, 0.29803923, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.49411765, 0.627451, 0.54901963, 1)
+
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -99,9 +109,51 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
+[sub_resource type="GDScript" id="GDScript_u045a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxbh2"]
+bg_color = Color(0.3764706, 0.49411765, 0.68235296, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3764706, 0.49411765, 0.68235296, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4nd2f"]
+bg_color = Color(0.3764706, 0.49411765, 0.68235296, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5529412, 0.64705884, 0.827451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2iu8"]
+bg_color = Color(0.3764706, 0.49411765, 0.68235296, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5529412, 0.64705884, 0.827451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1xemn"]
+bg_color = Color(0.3764706, 0.49411765, 0.68235296, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_788im"]
+bg_color = Color(0.3764706, 0.49411765, 0.68235296, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5529412, 0.64705884, 0.827451, 1)
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
-script = ExtResource("1_36de5")
+script = ExtResource("1_jj3vs")
+dialogue_resource = ExtResource("2_m0o5a")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
@@ -119,7 +171,10 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -219.0
+offset_left = 199.0
+offset_top = -251.0
+offset_right = -153.0
+offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
 
@@ -127,6 +182,7 @@ grow_vertical = 0
 clip_children = 2
 layout_mode = 2
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_jj3vs")
 
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer"]
 layout_mode = 2
@@ -143,6 +199,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_colors/default_color = Color(0.7704728, 0.8618471, 0.8062568, 1)
+theme_override_fonts/normal_font = ExtResource("2_wxbh2")
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -152,6 +210,7 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("4_4nd2f")
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
@@ -169,7 +228,7 @@ libraries = {
 }
 autoplay = "progress"
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -177,24 +236,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.5
-offset_top = -35.0
-offset_right = 290.5
-offset_bottom = 35.0
+offset_left = 272.0
+offset_top = -217.0
+offset_right = 522.0
+offset_bottom = -147.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
-script = ExtResource("3_72ixx")
-response_template = NodePath("ResponseExample")
+script = SubResource("GDScript_u045a")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4nd2f")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wxbh2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4nd2f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_x2iu8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_1xemn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_788im")
 text = "Response example"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
-[connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
