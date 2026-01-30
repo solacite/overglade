@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://xb0loc064hhe"]
+[gd_scene load_steps=2 format=3 uid="uid://xb0loc064hhe"]
+
+[ext_resource type="Texture2D" uid="uid://d3eofoandan40" path="res://images/smiley.png" id="1_ig7tw"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Heihei" type="Sprite2D" parent="."]
+position = Vector2(350, 318.00003)
+scale = Vector2(0.06030279, 0.05908209)
+texture = ExtResource("1_ig7tw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 797.0
+offset_top = 168.0
+offset_right = 837.0
+offset_bottom = 208.0
