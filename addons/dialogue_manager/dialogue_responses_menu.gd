@@ -173,6 +173,6 @@ func _on_response_gui_input(event: InputEvent, item: Control, response) -> void:
 	elif event.is_action_pressed(&"ui_accept" if next_action.is_empty() else next_action) and item in get_menu_items():
 		get_viewport().set_input_as_handled()
 		response_selected.emit(response)
-
-
-#endregion
+	
+	
+	#endregion
