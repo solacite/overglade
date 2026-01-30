@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://d035qs21hjepn" path="res://scripts/balloon.gd" id="1_jj3vs"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="Resource" uid="uid://b6q7nbq0akahp" path="res://dialogue/intro.dialogue" id="2_i80d5"]
 [ext_resource type="FontFile" uid="uid://vv7b57874v55" path="res://fonts/Merriweather_120pt_SemiCondensed-MediumItalic.ttf" id="2_wxbh2"]
 [ext_resource type="FontFile" uid="uid://b638xxpw3kc0l" path="res://fonts/Merriweather_120pt_SemiCondensed-Regular.ttf" id="4_4nd2f"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="4_m0o5a"]
-
-[sub_resource type="Resource" id="Resource_bjw4k"]
-metadata/__load_path__ = "res://dialogue/mkio.dialogue"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -154,7 +152,7 @@ border_color = Color(0.5529412, 0.64705884, 0.827451, 1)
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_jj3vs")
-dialogue_resource = SubResource("Resource_bjw4k")
+dialogue_resource = ExtResource("2_i80d5")
 
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
