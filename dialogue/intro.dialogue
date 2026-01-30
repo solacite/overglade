@@ -3,6 +3,10 @@ Heihei: [[buh.|bluh.|bguh.]]. b...bcaw.
 Heihei: hi...hello. you...how are you?
 #do get_node("/root/main.tscn/Node2D/ParallaxBackground/ParallaxLayer/Background").texture = load("res://backgrounds/IMG_5053.png")
 
+- a
+- b
+- c
+
 - okay. you?
 Heihei: ...
 Heihei: hmm...
