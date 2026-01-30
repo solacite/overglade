@@ -38,4 +38,3 @@ scale = Vector2(1.03, 1.03)
 texture = ExtResource("6_5vw27")
 
 [node name="ExampleBalloon" parent="." instance=ExtResource("2_0xm2m")]
-auto_start = true
