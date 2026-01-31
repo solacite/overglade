@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
 [ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/sad/IMG_5068.png" id="2_vcae8"]
-[ext_resource type="Texture2D" uid="uid://bx3i5ks25dll3" path="res://backgrounds/IMG_5069.png" id="3_osi8t"]
-[ext_resource type="Texture2D" uid="uid://dh7yx6m5ds365" path="res://backgrounds/IMG_5070.png" id="4_4gnb8"]
+[ext_resource type="Texture2D" uid="uid://bx3i5ks25dll3" path="res://backgrounds/combat/IMG_5069.png" id="3_osi8t"]
+[ext_resource type="Texture2D" uid="uid://dh7yx6m5ds365" path="res://backgrounds/combat/IMG_5070.png" id="4_4gnb8"]
 [ext_resource type="Texture2D" uid="uid://ciemvdyxjq1co" path="res://images/chicken-idle-back/Heihei-idle-back-1.png" id="4_sa5k0"]
 [ext_resource type="Texture2D" uid="uid://colac1l52137v" path="res://images/chicken-idle-back/Heihei-idle-back-2.png" id="5_8we11"]
 [ext_resource type="Texture2D" uid="uid://c6vu1htk7o3ab" path="res://images/chicken-idle-back/Heihei-idle-back-3.png" id="6_gvie1"]
