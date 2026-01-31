@@ -80,6 +80,27 @@ func _ready() -> void:
 	if not Engine.has_singleton("DialogueManager"):
 		Engine.register_singleton("DialogueManager", self)
 
+func _on_response_selected(response: Variant) -> void:
+	# Check if the response contains a texture change command
+	if typeof(response) == TYPE_DICTIONARY and response.has("change_sprite_texture"):
+		var texture_path = response["change_sprite_texture"]
+		_change_sprite_texture(texture_path)
+
+	# Handle the next dialogue step
+	if response.has("next_title"):
+		_move_to_next_dialogue(response["next_title"])
+
+func _change_sprite_texture(texture_path: String) -> void:
+	print("Changing sprite texture to: ", texture_path)
+	var new_texture = load(texture_path)
+	if is_instance_valid($Sprite2D) and new_texture:
+		$Sprite2D.texture = new_texture
+	else:
+		print("Failed to load texture from path: ", texture_path)
+
+func _move_to_next_dialogue(title: String) -> void:
+	print("Moving to next dialogue: ", title)
+	# Add your logic to handle the transition to the next dialogue here
 
 ## Step through lines and run any mutations until we either hit some dialogue or the end of the conversation
 func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_game_states: Array = [], mutation_behaviour: DMConstants.MutationBehaviour = DMConstants.MutationBehaviour.Wait) -> DialogueLine:

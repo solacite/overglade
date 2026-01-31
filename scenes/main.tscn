@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://xb0loc064hhe"]
+[gd_scene load_steps=7 format=3 uid="uid://xb0loc064hhe"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cgsbbj7i14tis" path="res://scenes/balloon.tscn" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dt6pbb5j6yudu" path="res://backgrounds/IMG_5049.png" id="4_7mycd"]
 [ext_resource type="Texture2D" uid="uid://cketmfnx5sjwp" path="res://backgrounds/IMG_5050.png" id="5_272bh"]
 [ext_resource type="Texture2D" uid="uid://cp5va4p6c080u" path="res://backgrounds/IMG_5051.png" id="6_5vw27"]
+[ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_tefeu"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -38,3 +39,9 @@ scale = Vector2(1.03, 1.03)
 texture = ExtResource("6_5vw27")
 
 [node name="ExampleBalloon" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
+stream = ExtResource("6_tefeu")
+volume_db = 17.049
+autoplay = true
