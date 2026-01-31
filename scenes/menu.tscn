@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bkwjho0p2ft08"]
+[gd_scene load_steps=12 format=3 uid="uid://bkwjho0p2ft08"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_g3eks"]
 [ext_resource type="Texture2D" uid="uid://bpx64rj04gxnf" path="res://backgrounds/IMG_5084.png" id="2_4ytvr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cbrw4vas14bt5" path="res://audio/IMG_5083.png" id="4_v86rl"]
 [ext_resource type="Texture2D" uid="uid://nkdaax2hfkj" path="res://images/title-test.png" id="6_g3eks"]
 [ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_mj5lg"]
+[ext_resource type="Script" uid="uid://l6qjg7iaw7hu" path="res://scripts/menu.gd" id="7_13sgg"]
 [ext_resource type="FontFile" uid="uid://cirqkpqcy43p7" path="res://fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="7_v86rl"]
 
 [sub_resource type="FontVariation" id="FontVariation_13sgg"]
@@ -79,6 +80,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("7_13sgg")
 
 [node name="Start" type="Button" parent="CanvasLayer/Menu"]
 layout_mode = 0
@@ -121,3 +123,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_13sgg")
 text = "quit"
+
+[connection signal="pressed" from="CanvasLayer/Menu/Start" to="CanvasLayer/Menu" method="_on_start_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Credits" to="CanvasLayer/Menu" method="_on_credits_pressed"]
+[connection signal="pressed" from="CanvasLayer/Menu/Quit" to="CanvasLayer/Menu" method="_on_quit_pressed"]
