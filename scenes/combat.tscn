@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dy4u77pv6m2mv"]
+[gd_scene load_steps=47 format=3 uid="uid://dy4u77pv6m2mv"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
 [ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/IMG_5068.png" id="2_vcae8"]
@@ -210,6 +210,62 @@ _data = {
 &"progress": SubResource("Animation_qkmqt")
 }
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8f6io"]
+load_path = "res://.godot/imported/timer-8.png-61c591f89d2865a1bd46af2085608a61.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bug7f"]
+load_path = "res://.godot/imported/timer-7.png-36c532d2c14a9cabe2e9c635b3c17631.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qocgv"]
+load_path = "res://.godot/imported/timer-6.png-0ddf9eb1430568be8ba32a06f1f8432a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fjou6"]
+load_path = "res://.godot/imported/timer-5.png-ae0a95af9e2f4cf1e3cd3d7efdebb3c4.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_454rk"]
+load_path = "res://.godot/imported/timer-4.png-cc4a3771ad4873948bdf9de1bba2cdb2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dtg3y"]
+load_path = "res://.godot/imported/timer-3.png-fcca2d2377f7dc35562870a4f2e2be09.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_obhcq"]
+load_path = "res://.godot/imported/timer-2.png-8a067ff494080c7a5304c2b33db053ed.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xhvpo"]
+load_path = "res://.godot/imported/timer-1.png-1f050f61652b25e108d431562c38631a.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07dqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_8f6io")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bug7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_qocgv")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_fjou6")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_454rk")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_dtg3y")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_obhcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_xhvpo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -361,6 +417,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_1337t")
 }
 autoplay = "progress"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Balloon"]
+position = Vector2(499.00003, 507)
+scale = Vector2(0.20625004, 0.20625004)
+sprite_frames = SubResource("SpriteFrames_07dqp")
+frame_progress = 0.12052465
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
 unique_name_in_owner = true
