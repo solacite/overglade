@@ -1,0 +1,123 @@
+[gd_scene load_steps=11 format=3 uid="uid://cbk26dyr7jkqe"]
+
+[ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_g3eks"]
+[ext_resource type="Texture2D" uid="uid://bpx64rj04gxnf" path="res://backgrounds/IMG_5084.png" id="2_4ytvr"]
+[ext_resource type="Texture2D" uid="uid://cd2cod63123s2" path="res://backgrounds/IMG_5082.png" id="3_g3eks"]
+[ext_resource type="Texture2D" uid="uid://cbrw4vas14bt5" path="res://backgrounds/IMG_5083.png" id="4_v86rl"]
+[ext_resource type="Texture2D" uid="uid://nkdaax2hfkj" path="res://images/title-test.png" id="6_g3eks"]
+[ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_mj5lg"]
+[ext_resource type="FontFile" uid="uid://cirqkpqcy43p7" path="res://fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="7_v86rl"]
+
+[sub_resource type="FontVariation" id="FontVariation_13sgg"]
+base_font = ExtResource("7_v86rl")
+variation_opentype = {
+1869640570: 18,
+2003072104: 100,
+2003265652: 600
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v86rl"]
+bg_color = Color(0.4309898, 0.7433873, 0.75598353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13sgg"]
+bg_color = Color(0.47843137, 0.7647059, 0.47058824, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_g3eks")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(3.2785645, -26.229536)
+scale = Vector2(1.0343047, 1.0343047)
+texture = ExtResource("2_4ytvr")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.75, 0.75)
+
+[node name="Grass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(1.055, 1.055)
+texture = ExtResource("3_g3eks")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(1.1, 1.1)
+
+[node name="Near-land" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(5.4179764, 3.0476027)
+scale = Vector2(1.0356436, 1.0356436)
+texture = ExtResource("4_v86rl")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
+stream = ExtResource("6_mj5lg")
+volume_db = 17.049
+autoplay = true
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(891, 91)
+scale = Vector2(0.25081703, 0.25081703)
+texture = ExtResource("6_g3eks")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Menu" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 187.0
+offset_right = 1140.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0.8862745, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
+theme_override_fonts/font = SubResource("FontVariation_13sgg")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13sgg")
+text = "start"
+
+[node name="Credits" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 238.0
+offset_right = 1140.0
+offset_bottom = 280.0
+theme_override_colors/font_color = Color(0.8862745, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
+theme_override_fonts/font = SubResource("FontVariation_13sgg")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13sgg")
+text = "credits"
+
+[node name="Quit" type="Button" parent="CanvasLayer/Menu"]
+layout_mode = 0
+offset_left = 897.0
+offset_top = 289.0
+offset_right = 1140.0
+offset_bottom = 331.0
+theme_override_colors/font_color = Color(0.8862745, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
+theme_override_fonts/font = SubResource("FontVariation_13sgg")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_v86rl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_13sgg")
+text = "quit"
