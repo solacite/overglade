@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dy8hfe3sfpwh3"
+path="res://.godot/imported/happy.dialogue-b5fdf7f794f3a81f314ceee5d46f79f6.tres"
+
+[deps]
+
+source_file="res://dialogue/happy.dialogue"
+dest_files=["res://.godot/imported/happy.dialogue-b5fdf7f794f3a81f314ceee5d46f79f6.tres"]
+
+[params]
+
+defaults=true

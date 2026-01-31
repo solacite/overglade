@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d2j04n31x33cl"
+path="res://.godot/imported/blahaj.dialogue-0a144b746416f636822e10f236198826.tres"
+
+[deps]
+
+source_file="res://dialogue/blahaj.dialogue"
+dest_files=["res://.godot/imported/blahaj.dialogue-0a144b746416f636822e10f236198826.tres"]
+
+[params]
+
+defaults=true

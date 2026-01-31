@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://oqmrogeu55qn"]
+
+[ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_3xdlx"]
+[ext_resource type="Texture2D" uid="uid://dt6pbb5j6yudu" path="res://backgrounds/sad/IMG_5049.png" id="2_k2qur"]
+[ext_resource type="Texture2D" uid="uid://syq3lifcp346" path="res://backgrounds/sad/IMG_5066.png" id="3_3xdlx"]
+[ext_resource type="Texture2D" uid="uid://cp5va4p6c080u" path="res://backgrounds/sad/IMG_5051.png" id="4_76f0g"]
+[ext_resource type="PackedScene" uid="uid://cgsbbj7i14tis" path="res://scenes/balloon.tscn" id="5_scjlt"]
+[ext_resource type="Resource" uid="uid://d2j04n31x33cl" path="res://dialogue/blahaj.dialogue" id="6_k2qur"]
+[ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_ugvrq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_3xdlx")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_k2qur")
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Background"]
+texture = ExtResource("2_k2qur")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.75, 0.75)
+
+[node name="Grass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(1.055, 1.055)
+texture = ExtResource("3_3xdlx")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Sparkles" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+scale = Vector2(1.03, 1.03)
+texture = ExtResource("4_76f0g")
+
+[node name="ExampleBalloon" parent="." instance=ExtResource("5_scjlt")]
+dialogue_resource = ExtResource("6_k2qur")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
+stream = ExtResource("6_ugvrq")
+volume_db = 17.049
+autoplay = true
