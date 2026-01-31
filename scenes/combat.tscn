@@ -1,7 +1,7 @@
-[gd_scene load_steps=47 format=3 uid="uid://dy4u77pv6m2mv"]
+[gd_scene load_steps=48 format=3 uid="uid://dvxxhi5006i7i"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
-[ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/IMG_5068.png" id="2_vcae8"]
+[ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/sad/IMG_5068.png" id="2_vcae8"]
 [ext_resource type="Texture2D" uid="uid://bx3i5ks25dll3" path="res://backgrounds/IMG_5069.png" id="3_osi8t"]
 [ext_resource type="Texture2D" uid="uid://dh7yx6m5ds365" path="res://backgrounds/IMG_5070.png" id="4_4gnb8"]
 [ext_resource type="Texture2D" uid="uid://ciemvdyxjq1co" path="res://images/chicken-idle-back/Heihei-idle-back-1.png" id="4_sa5k0"]
@@ -173,6 +173,14 @@ border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.49411765, 0.627451, 0.54901963, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f6io"]
+bg_color = Color(0.49411765, 0.627451, 0.54901963, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.32519412, 0.4351024, 0.37082392, 1)
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -386,21 +394,25 @@ columns = 2
 [node name="Button" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
 text = "Scream"
 
 [node name="Button2" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
 text = "Spit fire"
 
 [node name="Button3" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
 text = "Stare"
 
 [node name="Button4" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
 text = "Run"
 
 [node name="Control" type="Control" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]

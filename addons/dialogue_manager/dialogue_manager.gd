@@ -110,12 +110,15 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 		# End the conversation
 		dialogue_ended.emit(resource)
 		scene = scene + 1
+		print("scene num is " + str(scene))
 		if scene == 1:
 			get_tree().change_scene_to_file("res://scenes/blahaj.tscn")
 		if scene == 2:
 			get_tree().change_scene_to_file("res://scenes/happy.tscn")
-		else:
+		if scene == 3:
 			get_tree().change_scene_to_file("res://scenes/combat.tscn")
+		else:
+			print("something broke ?!")
 	return line
 
 
