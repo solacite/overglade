@@ -11,6 +11,7 @@ const DMCompiler = preload("./compiler/compiler.gd")
 const DMCompilerResult = preload("./compiler/compiler_result.gd")
 const DMResolvedLineData = preload("./compiler/resolved_line_data.gd")
 
+var scene = 0;
 
 ## Emitted when a dialogue balloon is created and dialogue starts
 signal dialogue_started(resource: DialogueResource)
@@ -108,6 +109,13 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 	if line == null:
 		# End the conversation
 		dialogue_ended.emit(resource)
+		scene = scene + 1
+		if scene == 1:
+			get_tree().change_scene_to_file("res://scenes/blahaj.tscn")
+		if scene == 2:
+			get_tree().change_scene_to_file("res://scenes/happy.tscn")
+		else:
+			get_tree().change_scene_to_file("res://scenes/combat.tscn")
 	return line
 
 
