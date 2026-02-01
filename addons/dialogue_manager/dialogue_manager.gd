@@ -113,8 +113,6 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 		if scene == 1:
 			get_tree().change_scene_to_file("res://scenes/blahaj.tscn")
 		if scene == 2:
-			get_tree().change_scene_to_file("res://scenes/happy.tscn")
-		if scene == 3:
 			get_tree().change_scene_to_file("res://scenes/combat.tscn")
 		if scene == 4:
 			get_tree().change_scene_to_file("res://scenes/otter.tscn")
