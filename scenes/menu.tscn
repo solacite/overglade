@@ -126,6 +126,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_13sgg")
 text = "quit"
 
 [node name="credits" parent="." instance=ExtResource("9_i6lef")]
+visible = false
 position = Vector2(109, -4)
 
 [connection signal="pressed" from="CanvasLayer/Menu/Start" to="CanvasLayer/Menu" method="_on_start_pressed"]
