@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="overglade"
-run/main_scene="uid://bkwjho0p2ft08"
+run/main_scene="uid://xb0loc064hhe"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [autoload]

@@ -1,21 +1,29 @@
-[gd_scene load_steps=48 format=3 uid="uid://dvxxhi5006i7i"]
+[gd_scene load_steps=62 format=3 uid="uid://dy4u77pv6m2mv"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
 [ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/sad/IMG_5068.png" id="2_vcae8"]
 [ext_resource type="Texture2D" uid="uid://bx3i5ks25dll3" path="res://backgrounds/combat/IMG_5069.png" id="3_osi8t"]
 [ext_resource type="Texture2D" uid="uid://dh7yx6m5ds365" path="res://backgrounds/combat/IMG_5070.png" id="4_4gnb8"]
+[ext_resource type="Texture2D" uid="uid://t8qioaosyaij" path="res://images/chicken-power-back/Heihei-power-back-1.png" id="4_knbq0"]
 [ext_resource type="Texture2D" uid="uid://ciemvdyxjq1co" path="res://images/chicken-idle-back/Heihei-idle-back-1.png" id="4_sa5k0"]
 [ext_resource type="Texture2D" uid="uid://colac1l52137v" path="res://images/chicken-idle-back/Heihei-idle-back-2.png" id="5_8we11"]
+[ext_resource type="Texture2D" uid="uid://d0ivnhsi08ysf" path="res://images/chicken-power-back/Heihei-power-back-2.png" id="5_55pgw"]
 [ext_resource type="Texture2D" uid="uid://c6vu1htk7o3ab" path="res://images/chicken-idle-back/Heihei-idle-back-3.png" id="6_gvie1"]
 [ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_hrcy2"]
+[ext_resource type="Texture2D" uid="uid://b5kus3eq8o60w" path="res://images/chicken-power-back/Heihei-power-back-3.png" id="6_ncfmp"]
 [ext_resource type="Texture2D" uid="uid://ihg4oevtrghl" path="res://images/chicken-idle-back/Heihei-idle-back-4.png" id="7_hmy61"]
+[ext_resource type="Texture2D" uid="uid://6g0ysqtlt2al" path="res://images/chicken-power-back/Heihei-power-back-4.png" id="7_iegrk"]
 [ext_resource type="Texture2D" uid="uid://to1xy0mlq5n6" path="res://images/haj-idle-back/Haj-idle-back-1.png" id="8_hmy61"]
 [ext_resource type="Texture2D" uid="uid://ddwdbvybj0puh" path="res://images/haj-idle-back/Haj-idle-back-2.png" id="9_0qyji"]
 [ext_resource type="Texture2D" uid="uid://br5hgs5eqbh4" path="res://images/haj-idle-back/Haj-idle-back-3.png" id="10_xkyey"]
 [ext_resource type="Texture2D" uid="uid://dved3dvrfx53v" path="res://images/haj-idle-back/Haj-idle-back-4.png" id="11_u07v1"]
 [ext_resource type="Texture2D" uid="uid://ct2xp4qa82upd" path="res://images/otter-idle/IMG_2631.PNG" id="12_5mjvh"]
+[ext_resource type="Texture2D" uid="uid://bc6jo8c0smb6x" path="res://images/haj-power-back/Haj-power-back-1.png" id="12_e8eoy"]
 [ext_resource type="Texture2D" uid="uid://wkw10v5t3mrp" path="res://images/otter-idle/IMG_2632.PNG" id="13_8f6io"]
+[ext_resource type="Texture2D" uid="uid://cgc3nvbn3iv7q" path="res://images/haj-power-back/Haj-power-back-2.png" id="13_df4ww"]
 [ext_resource type="Texture2D" uid="uid://bbeen032jeupa" path="res://images/otter-idle/IMG_2633.PNG" id="14_bug7f"]
+[ext_resource type="Texture2D" uid="uid://dfa1maoemtcej" path="res://images/haj-power-back/Haj-power-back-3.png" id="14_thnr1"]
+[ext_resource type="Texture2D" uid="uid://b2acovha6i0k0" path="res://images/haj-power-back/Haj-power-back-4.png" id="15_07dqp"]
 [ext_resource type="Texture2D" uid="uid://ojy1aeo7mlal" path="res://images/otter-idle/IMG_2634.PNG" id="15_qocgv"]
 [ext_resource type="Texture2D" uid="uid://bo1sku3fgxsmq" path="res://images/otter-idle/IMG_2635.PNG" id="16_fjou6"]
 [ext_resource type="Texture2D" uid="uid://gd3cg31bt8to" path="res://images/otter-idle/IMG_2636.PNG" id="17_454rk"]
@@ -24,10 +32,46 @@
 [ext_resource type="Texture2D" uid="uid://bblwr0ydr5yh0" path="res://images/otter-idle/IMG_2639.PNG" id="20_xhvpo"]
 [ext_resource type="Texture2D" uid="uid://301qcqt4em2c" path="res://images/otter-idle/IMG_2640.PNG" id="21_2niml"]
 [ext_resource type="Texture2D" uid="uid://drlxc2fmt435b" path="res://images/otter-idle/IMG_2641.PNG" id="22_knbq0"]
+[ext_resource type="FontFile" uid="uid://b638xxpw3kc0l" path="res://fonts/Merriweather_120pt_SemiCondensed-Regular.ttf" id="26_bug7f"]
 [ext_resource type="FontFile" uid="uid://vv7b57874v55" path="res://fonts/Merriweather_120pt_SemiCondensed-MediumItalic.ttf" id="27_obhcq"]
+[ext_resource type="Script" uid="uid://wjqirrsaih1s" path="res://scripts/combat.gd" id="33_55pgw"]
+[ext_resource type="Texture2D" uid="uid://cvagujelqam3r" path="res://images/timer/timer-0.png" id="36_ncfmp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bug7f"]
+bg_color = Color(0.5415337, 0.1935116, 0.20444646, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.7582373, 0.3037433, 0.3148262, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qocgv"]
+bg_color = Color(0.25882354, 0.3529412, 0.29803923, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.5254902, 0.61960787, 0.53333336, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0qyji"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_knbq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_55pgw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ncfmp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iegrk")
+}],
+"loop": true,
+"name": &"ability",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("4_sa5k0")
@@ -48,6 +92,23 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hkish"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_e8eoy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_df4ww")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_thnr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_07dqp")
+}],
+"loop": true,
+"name": &"ability",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("8_hmy61")
@@ -182,6 +243,8 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.32519412, 0.4351024, 0.37082392, 1)
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_ncfmp"]
+
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
 tracks/0/type = "bezier"
@@ -268,8 +331,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("CompressedTexture2D_xhvpo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_ncfmp")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 2.0
 }]
@@ -284,6 +350,19 @@ position = Vector2(578.00006, 329)
 scale = Vector2(0.61, 0.61)
 motion_scale = Vector2(0.4, 0.4)
 
+[node name="PlayerHealth" type="ProgressBar" parent="ParallaxBackground/ParallaxLayer"]
+unique_name_in_owner = true
+z_index = 1
+offset_left = -732.787
+offset_top = -86.88524
+offset_right = -454.0984
+offset_bottom = -32.78691
+theme_override_styles/background = SubResource("StyleBoxFlat_bug7f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qocgv")
+step = 1.0
+value = 100.0
+show_percentage = false
+
 [node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(-1.639472, 7.247925e-05)
 scale = Vector2(1.016052, 1.0321798)
@@ -294,21 +373,40 @@ position = Vector2(578.00006, 329)
 scale = Vector2(0.61, 0.61)
 motion_scale = Vector2(0.75, 0.75)
 
+[node name="EnemyHealth" type="ProgressBar" parent="ParallaxBackground/ParallaxLayer2"]
+unique_name_in_owner = true
+z_index = 1
+offset_left = 472.13104
+offset_top = -344.26227
+offset_right = 704.91797
+offset_bottom = -301.6393
+theme_override_styles/background = SubResource("StyleBoxFlat_bug7f")
+theme_override_styles/fill = SubResource("StyleBoxFlat_qocgv")
+step = 1.0
+value = 100.0
+show_percentage = false
+
 [node name="Grass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 scale = Vector2(1.055, 1.055)
 texture = ExtResource("3_osi8t")
 
 [node name="Chicken" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+unique_name_in_owner = true
 position = Vector2(-626.2296, 255.73767)
 scale = Vector2(0.22743239, 0.22743239)
 sprite_frames = SubResource("SpriteFrames_0qyji")
+animation = &"ability"
 autoplay = "default"
+frame_progress = 0.6965744
 
 [node name="Blahaj" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+unique_name_in_owner = true
 position = Vector2(-395.0822, 373.77045)
 scale = Vector2(0.22743239, 0.22743239)
 sprite_frames = SubResource("SpriteFrames_hkish")
+animation = &"ability"
 autoplay = "default"
+frame_progress = 0.23791054
 
 [node name="Otter" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(618.03265, -114.7541)
@@ -334,6 +432,7 @@ autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 100
+script = ExtResource("33_55pgw")
 
 [node name="Balloon" type="Control" parent="CanvasLayer"]
 unique_name_in_owner = true
@@ -382,38 +481,68 @@ mouse_filter = 1
 theme_override_colors/default_color = Color(0.7704728, 0.8618471, 0.8062568, 1)
 theme_override_fonts/normal_font = ExtResource("27_obhcq")
 bbcode_enabled = true
-text = "Choose a move"
+text = "Choose your move"
 fit_content = true
 scroll_active = false
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="DialogueLabel" type="RichTextLabel" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("26_bug7f")
+bbcode_enabled = true
+text = "Dialog"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+meta_underlined = false
+hint_underlined = false
+deselect_on_focus_loss_enabled = false
+visible_characters_behavior = 1
+
+[node name="Moves" type="GridContainer" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 columns = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+[node name="Scream" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Moves"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ncfmp")
 text = "Scream"
 
-[node name="Button2" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+[node name="Water" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Moves"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
-text = "Spit fire"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ncfmp")
+text = "Throw water"
 
-[node name="Button3" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+[node name="Stare" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Moves"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ncfmp")
 text = "Stare"
 
-[node name="Button4" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/GridContainer"]
+[node name="Skip" type="Button" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/VBoxContainer/Moves"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
-text = "Run"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_ncfmp")
+text = "Skip"
 
 [node name="Control" type="Control" parent="CanvasLayer/Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(20, 10)
@@ -430,13 +559,17 @@ libraries = {
 }
 autoplay = "progress"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Balloon"]
+[node name="Clock" type="AnimatedSprite2D" parent="CanvasLayer/Balloon"]
+unique_name_in_owner = true
 position = Vector2(499.00003, 507)
 scale = Vector2(0.20625004, 0.20625004)
 sprite_frames = SubResource("SpriteFrames_07dqp")
-frame_progress = 0.12052465
+autoplay = "default"
+frame = 8
+frame_progress = 1.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
 unique_name_in_owner = true
 
 [connection signal="gui_input" from="CanvasLayer/Balloon" to="CanvasLayer" method="_on_balloon_gui_input"]
+[connection signal="animation_finished" from="CanvasLayer/Balloon/Clock" to="CanvasLayer" method="_on_clock_animation_finished"]
