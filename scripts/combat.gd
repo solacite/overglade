@@ -55,11 +55,16 @@ func _on_clock_animation_finished() -> void:
 		show_damage(dmg)
 		tween.tween_property(%EnemyHealth, "value", enemyhealth, 2.0)
 		await get_tree().create_timer(3.0).timeout
-
+	
+	if enemyhealth <= 0:
+		pass
 	otter_damage()
 	await get_tree().create_timer(3.0).timeout
 	choose_move()
-
+	
+	if playerhealth <= 0:
+		pass
+		
 	# you could check if healths are <= 0 here and lead to diff endings
 
 func show_damage(dmg) -> void:

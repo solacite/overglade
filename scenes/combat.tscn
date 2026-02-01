@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dy4u77pv6m2mv"]
+[gd_scene load_steps=62 format=3 uid="uid://dvxxhi5006i7i"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
 [ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/sad/IMG_5068.png" id="2_vcae8"]
@@ -340,7 +340,7 @@ animations = [{
 "speed": 2.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 script = ExtResource("1_vcae8")
