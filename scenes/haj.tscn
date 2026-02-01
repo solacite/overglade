@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8eypi4q38c2g"]
+
+[ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_s57vb"]
+[ext_resource type="Texture2D" uid="uid://c8yv8wj50ukwn" path="res://images/IMG_2645 (1).png" id="2_s57vb"]
+[ext_resource type="Texture2D" uid="uid://dh7yx6m5ds365" path="res://backgrounds/combat/IMG_5070.png" id="3_23bj8"]
+[ext_resource type="PackedScene" uid="uid://cgsbbj7i14tis" path="res://scenes/balloon.tscn" id="4_jryhj"]
+[ext_resource type="Resource" uid="uid://b3lsrhoei35q6" path="res://dialogue/kidnap.dialogue" id="5_s57vb"]
+[ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_k2e0u"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("1_s57vb")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.4, 0.4)
+
+[node name="Background2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("2_s57vb")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(578.00006, 329)
+scale = Vector2(0.61, 0.61)
+motion_scale = Vector2(0.75, 0.75)
+
+[node name="Grass" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2(1.055, 1.055)
+texture = ExtResource("3_23bj8")
+
+[node name="ExampleBalloon" parent="." instance=ExtResource("4_jryhj")]
+dialogue_resource = ExtResource("5_s57vb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1, 0)
+stream = ExtResource("6_k2e0u")
+volume_db = 17.049
+autoplay = true

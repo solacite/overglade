@@ -4,6 +4,7 @@ var playerhealth = 100.0
 var enemyhealth = 100.0
 
 @onready var win_scene = preload("res://scenes/fight_win.tscn")
+@onready var lose_scene = preload("res://scenes/fight_lose.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -70,6 +71,7 @@ func _on_clock_animation_finished() -> void:
 		if playerhealth <= 0:
 			%CharacterLabel.text = "You lost..."
 			%DialogueLabel.text = "oh no,,,,"
+			get_tree().change_scene_to_packed(lose_scene)
 		else:
 			choose_move()
 

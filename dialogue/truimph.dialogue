@@ -1,14 +1,13 @@
 ~ start
-Blahaj: We defeated the otter,,,!
-Heihei: The overglade,, its safe,,,
-Heihei: I think.
+Blahaj: did we...did we make it?
+Heihei: yes, but...
 
 - something feels off.
-	Heihei: The otter....
+	Heihei: the otter....
 	Heihei: hmph,,...
 	
 - yay!
-	Blahaj: Hooway!!
+	Blahaj: hooway!!
 	
 Heihei: wait,,, do you,, feel this??
 => END

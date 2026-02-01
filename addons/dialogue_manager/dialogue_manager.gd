@@ -116,8 +116,12 @@ func get_next_dialogue_line(resource: DialogueResource, key: String = "", extra_
 			get_tree().change_scene_to_file("res://scenes/combat.tscn")
 		if scene == 4:
 			get_tree().change_scene_to_file("res://scenes/otter.tscn")
+		if scene == 8:
+			get_tree().change_scene_to_file("res://scenes/haj.tscn")
+		if scene == 0:
+			get_tree().change_scene_to_file("res://scenes/menu.tscn")
 		else:
-			print("something broke ?! or is broken")
+			print("get help")
 	return line
 
 

@@ -7,7 +7,7 @@ var trauma = 0.4
 func _ready() -> void:
 	set_process(true)
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _shake():

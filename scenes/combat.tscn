@@ -606,7 +606,7 @@ autoplay = "progress"
 
 [node name="Clock" type="AnimatedSprite2D" parent="CanvasLayer/Balloon"]
 unique_name_in_owner = true
-position = Vector2(499.00003, 507)
+position = Vector2(1096, 414.00003)
 scale = Vector2(0.20625004, 0.20625004)
 sprite_frames = SubResource("SpriteFrames_07dqp")
 autoplay = "default"

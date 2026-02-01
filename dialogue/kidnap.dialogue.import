@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b3lsrhoei35q6"
+path="res://.godot/imported/kidnap.dialogue-777cca6bfd85bf19046f9921138bdb1a.tres"
+
+[deps]
+
+source_file="res://dialogue/kidnap.dialogue"
+dest_files=["res://.godot/imported/kidnap.dialogue-777cca6bfd85bf19046f9921138bdb1a.tres"]
+
+[params]
+
+defaults=true
