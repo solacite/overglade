@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3h56yks8x6an"]
+[gd_scene load_steps=7 format=3 uid="uid://devlc67lyk85g"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_mr7v2"]
 [ext_resource type="Texture2D" uid="uid://duerpdvnal8qy" path="res://backgrounds/happy/IMG_5060.png" id="2_ux7ot"]
@@ -31,6 +31,7 @@ texture = ExtResource("3_ux7ot")
 
 [node name="ExampleBalloon" parent="." instance=ExtResource("5_2m8x4")]
 dialogue_resource = ExtResource("4_h1fe1")
+scene_id = 3
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1, 0)

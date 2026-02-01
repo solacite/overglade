@@ -19,6 +19,8 @@ extends CanvasLayer
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
+@export var scene_id: int = 0
+
 ## Temporary game states
 var temporary_game_states: Array = []
 
@@ -68,6 +70,7 @@ var mutation_cooldown: Timer = Timer.new()
 
 
 func _ready() -> void:
+	DialogueManager.scene = scene_id
 	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 

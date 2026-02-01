@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://disjcxlys6iwe"
+path="res://.godot/imported/otter.dialogue-1b11931fc2b17f5b1814c05b2615be7d.tres"
+
+[deps]
+
+source_file="res://dialogue/otter.dialogue"
+dest_files=["res://.godot/imported/otter.dialogue-1b11931fc2b17f5b1814c05b2615be7d.tres"]
+
+[params]
+
+defaults=true

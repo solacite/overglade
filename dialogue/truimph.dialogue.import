@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://be2uq8rsn8eja"
+path="res://.godot/imported/truimph.dialogue-2c2c6446f9ae80efad15037b0eb411fe.tres"
+
+[deps]
+
+source_file="res://dialogue/truimph.dialogue"
+dest_files=["res://.godot/imported/truimph.dialogue-2c2c6446f9ae80efad15037b0eb411fe.tres"]
+
+[params]
+
+defaults=true

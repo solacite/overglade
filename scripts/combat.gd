@@ -3,6 +3,8 @@ extends CanvasLayer
 var playerhealth = 100.0
 var enemyhealth = 100.0
 
+@onready var win_scene = preload("res://scenes/fight_win.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -56,11 +58,20 @@ func _on_clock_animation_finished() -> void:
 		tween.tween_property(%EnemyHealth, "value", enemyhealth, 2.0)
 		await get_tree().create_timer(3.0).timeout
 
-	otter_damage()
-	await get_tree().create_timer(3.0).timeout
-	choose_move()
+	if enemyhealth <= 0:
+		%CharacterLabel.text = "You win!"
+		%DialogueLabel.text = "The otter has fallen."
+		await get_tree().create_timer(3.0).timeout
+		get_tree().change_scene_to_packed(win_scene)
+	else:
+		otter_damage()
+		await get_tree().create_timer(3.0).timeout
 
-	# you could check if healths are <= 0 here and lead to diff endings
+		if playerhealth <= 0:
+			%CharacterLabel.text = "You lost..."
+			%DialogueLabel.text = "oh no,,,,"
+		else:
+			choose_move()
 
 func show_damage(dmg) -> void:
 	if dmg > 0:
