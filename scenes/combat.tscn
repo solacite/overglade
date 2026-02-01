@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://dvxxhi5006i7i"]
+[gd_scene load_steps=67 format=3 uid="uid://dvxxhi5006i7i"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
 [ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/sad/IMG_5068.png" id="2_vcae8"]
@@ -243,6 +243,30 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.32519412, 0.4351024, 0.37082392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iegrk"]
+bg_color = Color(0.49411765, 0.627451, 0.54901963, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3254902, 0.43529412, 0.37254903, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_df4ww"]
+bg_color = Color(0.49411765, 0.627451, 0.54901963, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8eoy"]
+bg_color = Color(0.49411765, 0.627451, 0.54901963, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3254902, 0.43529412, 0.37254903, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thnr1"]
+bg_color = Color(0.3254902, 0.43529412, 0.37254903, 1)
+border_width_left = 2
+border_color = Color(0.3254902, 0.43529412, 0.37254903, 1)
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_ncfmp"]
 
@@ -513,7 +537,12 @@ columns = 2
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("26_bug7f")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iegrk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_df4ww")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8eoy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_thnr1")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_ncfmp")
 text = "Scream"
@@ -522,7 +551,12 @@ text = "Scream"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("26_bug7f")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iegrk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_df4ww")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8eoy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_thnr1")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_ncfmp")
 text = "Throw water"
@@ -531,7 +565,12 @@ text = "Throw water"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("26_bug7f")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iegrk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_df4ww")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8eoy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_thnr1")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_ncfmp")
 text = "Stare"
@@ -540,7 +579,12 @@ text = "Stare"
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("26_bug7f")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8f6io")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iegrk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_df4ww")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e8eoy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_thnr1")
 toggle_mode = true
 button_group = SubResource("ButtonGroup_ncfmp")
 text = "Skip"

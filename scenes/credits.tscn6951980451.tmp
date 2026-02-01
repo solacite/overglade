@@ -1,21 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://byvypilaf425l"]
+[gd_scene load_steps=12 format=3 uid="uid://byvypilaf425l"]
 
 [ext_resource type="FontFile" uid="uid://cirqkpqcy43p7" path="res://fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="1_0bpdh"]
 [ext_resource type="Texture2D" uid="uid://biib0i6veia3h" path="res://backgrounds/main menu/IMG_2644.png" id="1_0ctdu"]
+[ext_resource type="Script" uid="uid://b20w7uo8qv1ux" path="res://scripts/credits.gd" id="1_2fbfq"]
 [ext_resource type="FontFile" uid="uid://vv7b57874v55" path="res://fonts/Merriweather_120pt_SemiCondensed-MediumItalic.ttf" id="2_0ctdu"]
-
-[sub_resource type="GDScript" id="GDScript_0ctdu"]
-script/source = "extends Node2D
-
-@onready var animation_player: AnimationPlayer = $scene/AnimationPlayer
-
-
-func _on_back_pressed() -> void:
-	animation_player.play(\"slide_out\")
-
-func _on_credits_pressed() -> void:
-	animation_player.play(\"slide_in\")
-"
 
 [sub_resource type="FontVariation" id="FontVariation_2ckv8"]
 base_font = ExtResource("1_0bpdh")
@@ -26,19 +14,15 @@ variation_opentype = {
 }
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ctdu"]
-bg_color = Color(0, 0.03137255, 0.4392157, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8gwij"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0, 0.03137255, 0.4392157, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fbfq"]
 bg_color = Color(0.47843137, 0.7647059, 0.47058824, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mah5v"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kyhnv"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
 
 [sub_resource type="Animation" id="Animation_2ckv8"]
 length = 0.001
@@ -95,25 +79,24 @@ _data = {
 }
 
 [node name="credits" type="Node2D"]
-script = SubResource("GDScript_0ctdu")
+script = ExtResource("1_2fbfq")
 
 [node name="scene" type="Node2D" parent="."]
 position = Vector2(0, -567)
 scale = Vector2(0.91222924, 0.69830585)
 
 [node name="ColorRect" type="ColorRect" parent="scene"]
-visible = false
 offset_left = -231.30151
-offset_top = -264.9269
+offset_top = -253.47063
 offset_right = 1254.2118
-offset_bottom = 389.0732
+offset_bottom = 400.52948
 scale = Vector2(1.000643, 1.6253027)
 color = Color(3.985226e-05, 0.5045793, 0.9329139, 1)
 
 [node name="Img2644" type="Sprite2D" parent="scene"]
 modulate = Color(0, 1.6279508, 1.6279508, 1)
-position = Vector2(502.06677, 286.4074)
-scale = Vector2(0.75, 0.973)
+position = Vector2(516.3176, 379.48987)
+scale = Vector2(0.531, 0.694)
 texture = ExtResource("1_0ctdu")
 
 [node name="Node2D" type="Node2D" parent="scene"]
@@ -150,32 +133,16 @@ theme_override_font_sizes/normal_font_size = 150
 text = "julia"
 
 [node name="Back" type="Button" parent="scene"]
-offset_left = -61.388077
-offset_top = -54.41739
-offset_right = 38.611923
-offset_bottom = -13.417389
+offset_left = -2.1924324
+offset_top = -81.6261
+offset_right = 122.80757
+offset_bottom = -39.6261
 theme_override_colors/font_color = Color(0.22137064, 0.452331, 1, 1)
-theme_override_colors/font_focus_color = Color(0.21960784, 0.4509804, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.21960784, 0.4509804, 1, 1)
-theme_override_colors/font_hover_color = Color(0.21960784, 0.4509804, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
-theme_override_colors/icon_hover_color = Color(0.21960784, 0.4509804, 1, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0.21960784, 0.4509804, 1, 1)
 theme_override_fonts/font = SubResource("FontVariation_2ckv8")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_0ctdu")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8gwij")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2fbfq")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_mah5v")
-theme_override_styles/focus = SubResource("StyleBoxFlat_kyhnv")
 text = "back"
-
-[node name="ColorRect" type="ColorRect" parent="scene/Back"]
-visible = false
-layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 654.0
-scale = Vector2(0.91222924, 0.69830585)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="scene"]
 root_node = NodePath("../..")
