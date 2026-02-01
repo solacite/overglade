@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dy4u77pv6m2mv"]
+[gd_scene load_steps=52 format=3 uid="uid://dvxxhi5006i7i"]
 
 [ext_resource type="Script" uid="uid://rmv48o7262qs" path="res://scripts/parallax_background.gd" id="1_vcae8"]
 [ext_resource type="Texture2D" uid="uid://c8gywde4m3j4l" path="res://backgrounds/sad/IMG_5068.png" id="2_vcae8"]
@@ -18,13 +18,10 @@
 [ext_resource type="Texture2D" uid="uid://br5hgs5eqbh4" path="res://images/haj-idle-back/Haj-idle-back-3.png" id="10_xkyey"]
 [ext_resource type="Texture2D" uid="uid://dved3dvrfx53v" path="res://images/haj-idle-back/Haj-idle-back-4.png" id="11_u07v1"]
 [ext_resource type="Texture2D" uid="uid://ct2xp4qa82upd" path="res://images/otter-idle/IMG_2631.PNG" id="12_5mjvh"]
-[ext_resource type="Texture2D" uid="uid://bc6jo8c0smb6x" path="res://images/haj-power-back/Haj-power-back-1.png" id="12_e8eoy"]
 [ext_resource type="Texture2D" uid="uid://wkw10v5t3mrp" path="res://images/otter-idle/IMG_2632.PNG" id="13_8f6io"]
-[ext_resource type="Texture2D" uid="uid://cgc3nvbn3iv7q" path="res://images/haj-power-back/Haj-power-back-2.png" id="13_df4ww"]
 [ext_resource type="Texture2D" uid="uid://bbeen032jeupa" path="res://images/otter-idle/IMG_2633.PNG" id="14_bug7f"]
-[ext_resource type="Texture2D" uid="uid://dfa1maoemtcej" path="res://images/haj-power-back/Haj-power-back-3.png" id="14_thnr1"]
-[ext_resource type="Texture2D" uid="uid://b2acovha6i0k0" path="res://images/haj-power-back/Haj-power-back-4.png" id="15_07dqp"]
 [ext_resource type="Texture2D" uid="uid://ojy1aeo7mlal" path="res://images/otter-idle/IMG_2634.PNG" id="15_qocgv"]
+[ext_resource type="Texture2D" uid="uid://duxyo3wi1xkll" path="res://images/haj-ability/Haj-power-back-4.png" id="15_xhvpo"]
 [ext_resource type="Texture2D" uid="uid://bo1sku3fgxsmq" path="res://images/otter-idle/IMG_2635.PNG" id="16_fjou6"]
 [ext_resource type="Texture2D" uid="uid://gd3cg31bt8to" path="res://images/otter-idle/IMG_2636.PNG" id="17_454rk"]
 [ext_resource type="Texture2D" uid="uid://w7ekin5ql7qx" path="res://images/otter-idle/IMG_2637.PNG" id="18_dtg3y"]
@@ -125,6 +122,23 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_454rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_dtg3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_obhcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xhvpo")
+}],
+"loop": true,
+"name": &"power",
+"speed": 6.7
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_55pgw"]
@@ -406,7 +420,6 @@ scale = Vector2(0.22743239, 0.22743239)
 sprite_frames = SubResource("SpriteFrames_hkish")
 animation = &"ability"
 autoplay = "default"
-frame_progress = 0.23791054
 
 [node name="Otter" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 position = Vector2(618.03265, -114.7541)
