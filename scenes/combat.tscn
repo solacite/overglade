@@ -578,3 +578,4 @@ script = ExtResource("37_iegrk")
 
 [connection signal="gui_input" from="CanvasLayer/Balloon" to="CanvasLayer" method="_on_balloon_gui_input"]
 [connection signal="animation_finished" from="CanvasLayer/Balloon/Clock" to="CanvasLayer" method="_on_clock_animation_finished"]
+[connection signal="animation_finished" from="CanvasLayer/Balloon/Clock" to="Camera2D" method="_shake"]
