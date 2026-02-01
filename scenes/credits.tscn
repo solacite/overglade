@@ -1,8 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://byvypilaf425l"]
+[gd_scene load_steps=18 format=3 uid="uid://byvypilaf425l"]
 
 [ext_resource type="FontFile" uid="uid://cirqkpqcy43p7" path="res://fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="1_0bpdh"]
 [ext_resource type="Texture2D" uid="uid://biib0i6veia3h" path="res://backgrounds/main menu/IMG_2644.png" id="1_0ctdu"]
 [ext_resource type="FontFile" uid="uid://vv7b57874v55" path="res://fonts/Merriweather_120pt_SemiCondensed-MediumItalic.ttf" id="2_0ctdu"]
+[ext_resource type="Texture2D" uid="uid://dypyvfxvxekv3" path="res://images/urdl/IMG_2630.png" id="4_mah5v"]
+[ext_resource type="Texture2D" uid="uid://5ge13xk5ei1t" path="res://images/urdl/IMG_2629.png" id="5_kyhnv"]
+[ext_resource type="Texture2D" uid="uid://du6fhnoaihv6h" path="res://images/urdl/IMG_2622.png" id="6_ooihk"]
 
 [sub_resource type="GDScript" id="GDScript_0ctdu"]
 script/source = "extends Node2D
@@ -182,5 +185,22 @@ root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_0ctdu")
 }
+
+[node name="Img2630" type="Sprite2D" parent="scene"]
+position = Vector2(105.236694, 138.90771)
+rotation = 0.84355116
+scale = Vector2(0.12500916, 0.1299881)
+skew = -0.26127362
+texture = ExtResource("4_mah5v")
+
+[node name="Img2629" type="Sprite2D" parent="scene"]
+position = Vector2(765.15857, 253.47064)
+scale = Vector2(0.06577294, 0.08592224)
+texture = ExtResource("5_kyhnv")
+
+[node name="Img2622" type="Sprite2D" parent="scene"]
+position = Vector2(228.01288, 471.14032)
+scale = Vector2(0.1808756, 0.23628618)
+texture = ExtResource("6_ooihk")
 
 [connection signal="pressed" from="scene/Back" to="." method="_on_back_pressed"]
