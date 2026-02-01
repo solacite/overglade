@@ -1,3 +1,101 @@
-[gd_scene format=3 uid="uid://byvypilaf425l"]
+[gd_scene load_steps=9 format=3 uid="uid://byvypilaf425l"]
 
-[node name="Credits_tscn" type="Node2D"]
+[ext_resource type="FontFile" uid="uid://cirqkpqcy43p7" path="res://fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="1_0bpdh"]
+
+[sub_resource type="FontVariation" id="FontVariation_2ckv8"]
+base_font = ExtResource("1_0bpdh")
+variation_opentype = {
+1869640570: 18,
+2003072104: 100,
+2003265652: 600
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ctdu"]
+bg_color = Color(0.4309898, 0.7433873, 0.75598353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fbfq"]
+bg_color = Color(0.47843137, 0.7647059, 0.47058824, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
+
+[sub_resource type="Animation" id="Animation_0bpdh"]
+resource_name = "slide_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_2ckv8"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_0ctdu"]
+resource_name = "slide_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("scene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0ctdu"]
+_data = {
+&"RESET": SubResource("Animation_2ckv8"),
+&"slide_in": SubResource("Animation_0bpdh"),
+&"slide_out": SubResource("Animation_0ctdu")
+}
+
+[node name="credits" type="Node2D"]
+
+[node name="scene" type="Node2D" parent="."]
+position = Vector2(0, -567)
+scale = Vector2(0.91222924, 0.69830585)
+
+[node name="ColorRect" type="ColorRect" parent="scene"]
+offset_right = 1154.0
+offset_bottom = 654.0
+scale = Vector2(0.91222924, 0.69830585)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="scene"]
+offset_left = 314.6139
+offset_top = 137.47559
+offset_right = 814.6139
+offset_bottom = 437.4756
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
+
+[node name="Back" type="Button" parent="scene"]
+offset_left = -2.1924324
+offset_top = -81.6261
+offset_right = 122.80757
+offset_bottom = -39.6261
+theme_override_colors/font_color = Color(0.8862745, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.43137255, 0.7411765, 0.75686276, 1)
+theme_override_fonts/font = SubResource("FontVariation_2ckv8")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ctdu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fbfq")
+text = "back"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="scene"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_0ctdu")
+}

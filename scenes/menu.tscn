@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bpx64rj04gxnf" path="res://backgrounds/happy/IMG_5084.png" id="2_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://cd2cod63123s2" path="res://backgrounds/main menu/IMG_5082.png" id="3_g3eks"]
 [ext_resource type="Texture2D" uid="uid://cbrw4vas14bt5" path="res://backgrounds/main menu/IMG_5083.png" id="4_v86rl"]
+[ext_resource type="AudioStream" uid="uid://47guxac1b3si" path="res://audio/overglade.mp3" id="5_13sgg"]
 [ext_resource type="Texture2D" uid="uid://nkdaax2hfkj" path="res://images/title-test.png" id="6_g3eks"]
-[ext_resource type="AudioStream" uid="uid://cv1nyhg5fsfgu" path="res://audio/beatupdlouderagain.wav" id="6_mj5lg"]
 [ext_resource type="Script" uid="uid://l6qjg7iaw7hu" path="res://scripts/menu.gd" id="7_13sgg"]
 [ext_resource type="FontFile" uid="uid://cirqkpqcy43p7" path="res://fonts/Merriweather-VariableFont_opsz,wdth,wght.ttf" id="7_v86rl"]
 
@@ -64,8 +64,8 @@ texture = ExtResource("4_v86rl")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(1, 0)
-stream = ExtResource("6_mj5lg")
-volume_db = 17.049
+stream = ExtResource("5_13sgg")
+volume_db = 4.0
 autoplay = true
 
 [node name="title" type="Sprite2D" parent="."]
